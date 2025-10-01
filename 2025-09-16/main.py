@@ -10,8 +10,8 @@ def main():
     lexer = Lexer(input)
     print(input)
     token = lexer.getToken()
-    while token.type != TokenType.EOF:
-        print(str(token.type) + '('+ token.text + ')')
+    while token.token_type != TokenType.EOF:
+        print(f"Tipo: {token.token_type.name.ljust(15)} | Texto: '{token.literal}'")
         token = lexer.getToken()
 
 main()
